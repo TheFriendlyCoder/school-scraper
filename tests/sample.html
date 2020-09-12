@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title><link id="BPBaseCSS" rel="stylesheet" type="text/css" media="all" /><link id="thim-css-style-css" rel="stylesheet" type="text/css" media="all" href="https://francophonesud.nbed.nb.ca/wp-content/themes/eduma/assets/css/custom-style.css" /><link id="thim-style-css" rel="stylesheet" type="text/css" media="all" href="https://francophonesud.nbed.nb.ca/wp-content/themes/district/style.css" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $("#tSchool td.tblC2:contains('Closed')").css('color', 'red');
+           $("#tSchool td.tblC2:contains('Closed')").css('font-weight', '500');
+           $("#tSchool td.tblC2:contains('Open')").css('color', 'green');
+
+           $("#tSchool td.tblC2:contains('Fermée')").css('color', 'red');
+           $("#tSchool td.tblC2:contains('Fermée')").css('font-weight', '500');
+           $("#tSchool td.tblC2:contains('Ouvert')").css('color', 'green');
+
+           $("#tSchool td.tblC3:contains('En retard')").css('color', 'orange');
+           $("#tSchool td.tblC3:contains('Delays')").css('color', 'orange');
+
+           $("#tSchool td.tblC3:contains('Modifié')").css('color', 'orange');
+           $("#tSchool td.tblC3:contains('Modified')").css('color', 'orange');
+
+           $("#tSchool td.tblC3:contains('Ne circulent pas')").css('color', 'red');
+           $("#tSchool td.tblC3:contains('Ne circulent pas')").css('font-weight', '500');
+           $("#tSchool td.tblC3:contains('Not Running')").css('color', 'red');
+           $("#tSchool td.tblC3:contains('Not Running')").css('font-weight', '500');
+
+           $("#tSchool td.tblC3:contains('Annuler')").css('color', 'red');
+           $("#tSchool td.tblC3:contains('Annuler')").css('font-weight', '500');
+           $("#tSchool td.tblC3:contains('Cancelled')").css('color', 'red');
+           $("#tSchool td.tblC3:contains('Cancelled')").css('font-weight', '500');
+
+           $("#tSchool td.tblC3:contains('À l’heure')").css('color', 'green');
+           $("#tSchool td.tblC3:contains('On Time')").css('color', 'green');
+
+           $("#tSchool td.tblC4:contains('Voir avis général')").css('color', 'orange');
+           $("#tSchool td.tblC4:contains('See General Notices')").css('color', 'orange');
+
+           // following works as general paint of font
+           //$("#tSchool td.tblC4:contains('Voir avis général')").each(function () {
+           //    $(this).css('color', 'orange');
+           //    $(this).parent().find('td:nth-child(4)').css('color', 'orange');
+           //});
+
+           // Identify key word in General notice to paint font
+           $("#TGenStatus td.tblG1:contains():contains()").each(function () {
+               $("#tSchool td.tblC4:contains('Voir avis général')").each(function () {
+                   $(this).css('color', 'orange');
+                   $(this).parent().find('td:nth-child(4)').css('color', 'orange');
+               });
+           });
+        });
+    </script>
+    <style>
+        .bText {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body id="bpb_main1" class="retards">
+    <form name="main_content" method="post" action="./BPRFtbl.aspx?dst=dsfs&amp;amp%3bvtbl=1" id="main_content" class="retards">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzODQ5MTAwMzAPZBYEAgEPZBYGAgEPFgIeBGhyZWZkZAICDxYCHwAFVWh0dHBzOi8vZnJhbmNvcGhvbmVzdWQubmJlZC5uYi5jYS93cC1jb250ZW50L3RoZW1lcy9lZHVtYS9hc3NldHMvY3NzL2N1c3RvbS1zdHlsZS5jc3NkAgMPFgIfAAVGaHR0cHM6Ly9mcmFuY29waG9uZXN1ZC5uYmVkLm5iLmNhL3dwLWNvbnRlbnQvdGhlbWVzL2Rpc3RyaWN0L3N0eWxlLmNzc2QCAw8WAh4FY2xhc3MFB3JldGFyZHMWAgIBDxYCHwEFB3JldGFyZHMWCgIBD2QWBAIBDxYCHglpbm5lcmh0bWwFFVJldGFyZHMgZXQgZmVybWV0dXJlc2QCAw9kFgICAQ8PFgIeBFRleHQF3wFDZSB0YWJsZWF1IG5lIHRpZW50IHBhcyBjb21wdGUgZGVzIGpvdXJuw6llcyBkZSBjb25nw6kgcMOpZGFnb2dpcXVlcywgZGUgbGEgcmVsw6JjaGUgc2NvbGFpcmUsIG91IGRlcyB2YWNhbmNlcyBk4oCZw6l0w6kgZXQgZOKAmWhpdmVyLiBMZXMgaW5mb3JtYXRpb25zIHNvbnQgbWlzZXMgw6Agam91ciBzZXVsZW1lbnQgbG9ycyBkZXMgam91cm7DqWVzIGRlIGNsYXNzZSByw6lndWxpw6hyZXMuZGQCAw9kFgYCAQ8PFgIfAwUaRGVybmnDqHJlIG1vZGlmaWNhdGlvbnMgOiBkZAIDDw8WAh8DBSBzYW1lZGksIDEyIHNlcHRlbWJyZSAyMDIwIDE1OjE3IGRkAgUPDxYCHwNlZGQCBQ9kFgQCAQ9kFgRmD2QWAmYPDxYCHwMFEUF2aXMgZ8OpbsOpcmFsIDogZGQCAQ9kFgJmDw8WAh8DBSJBdWN1biBhdmlzIGfDqW7DqXJhbCBlbiBjZSBtb21lbnQuZGQCAw8PFgIeB1Zpc2libGVoZGQCBw88KwALAgAPFggeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AiUeCVBhZ2VDb3VudAIBHhVfIURhdGFTb3VyY2VJdGVtQ291bnQCJWQBFCsABTwrAAQBABYCHgpIZWFkZXJUZXh0BQdSw6lnaW9uPCsABAEAFgIfCQUPTm9tIGRlIGwnw6ljb2xl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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2539FBB5" />
+            
+                <div id="hDiv1">
+                    <h1 id="hTitle">Retards et fermetures</h1>
+                    <hr />
+                    <p id="pText" class="pText">
+                        <span id="lText" class="pText">Ce tableau ne tient pas compte des journées de congé pédagogiques, de la relâche scolaire, ou des vacances d’été et d’hiver. Les informations sont mises à jour seulement lors des journées de classe régulières.</span>
+                    </p>
+                    <br />
+                </div>
+                <p id="pDate" class="pDate">
+                    <span id="tDate" class="tDate">Dernière modifications : </span>
+                    <span id="lDate" class="lDate">samedi, 12 septembre 2020 15:17 </span>
+                    <br />
+                    <span id="textDB" class="tDate"></span>
+                </p>
+                 
+                <p id="p1Gen">
+                 <tr id="r1Gen">
+	<td class="tdP1"><span id="LGenMessage" class="bText">Avis général : </span></td><td class="tdP2"><span id="LGenStatus" class="lStatus">Aucun avis général en ce moment.</span></td>
+</tr>
+                    
+                  
+                </p>
+                <table class="tbl1" cellspacing="0" rules="all" border="1" id="tSchool">
+	<tr>
+		<td class="tblH0">Région</td><td class="tblH1">Nom de l'école</td><td class="tblH2">École</td><td class="tblH3">Autobus</td><td class="tblH4">Messages</td>
+	</tr><tr>
+		<td>BAIE-SAINTE-ANNE</td><td>École Régionale de Baie-Sainte-Anne</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>BOUCTOUCHE</td><td>École Clément-Cormier</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>BOUCTOUCHE</td><td>École Dr-Marguerite-Michaud</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>CAP-PELE</td><td>École Donat-Robichaud</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>COCAGNE</td><td>École Blanche-Bourgeois</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>DIEPPE</td><td>École Amirault</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>DIEPPE</td><td>École Anna-Malenfant</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>DIEPPE</td><td>École Antonine-Maillet</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>DIEPPE</td><td>École Carrefour de l'Acadie</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>DIEPPE</td><td>École Le Marais</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>DIEPPE</td><td>École Mathieu-Martin</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>DIEPPE</td><td>École Sainte-Thérèse</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>Fredericton</td><td>École Arc-en-ciel</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>FREDERICTON</td><td>École des Bâtisseurs</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>FREDERICTON</td><td>École Les Éclaireurs</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>FREDERICTON</td><td>École Sainte-Anne</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>GRAND-BARACHOIS</td><td>École Père-Edgar-T.-LeBlanc</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>GRANDE-DIGUE</td><td>École Grande-Digue</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>MEMRAMCOOK</td><td>École Abbey-Landry</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>MIRAMICHI</td><td>École Carrefour Beausoleil</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>MONCTON</td><td>École Champlain</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>MONCTON</td><td>École Le Mascaret</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>MONCTON</td><td>École Le Sommet</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>MONCTON</td><td>École L'Odyssée</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>MONCTON</td><td>École Sainte-Bernadette</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>MONCTON</td><td>École Saint-Henri</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>NOTRE-DAME</td><td>École Notre-Dame</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>QUISPAMSIS</td><td>École des Pionniers</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>RICHIBUCTO</td><td>École Soleil Levant</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>ROGERSVILLE</td><td>École Étoile de l'Acadie</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>SAINT-ANTOINE</td><td>École Camille-Vautour</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>SAINTE-ANNE-DE-KENT</td><td>École Calixte-F.-Savoie</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>SAINTE-MARIE-DE-KENT</td><td>École Mont Carmel</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>SAINT-JEAN</td><td>Centre scolaire Samuel-de-Champlain</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>SAINT-LOUIS-DE-KENT</td><td>École Mgr-Marcel-François-Richard</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr bgcolor="WhiteSmoke">
+		<td>SHEDIAC</td><td>École Mgr-François-Bourgeois</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr><tr>
+		<td>SHEDIAC</td><td>Polyvalente Louis-J.-Robichaud</td><td class="tblC2">Ouvert</td><td class="tblC3">À l’heure</td><td class="tblC4">&nbsp;</td>
+	</tr>
+</table>
+                
+             
+       
+
+     </form>
+
+</body>
+</html>

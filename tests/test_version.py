@@ -1,4 +1,4 @@
-import ksp_sample as proj_to_test
+import school_scraper as proj_to_test
 import pytest
 
 
