@@ -5,10 +5,9 @@
     "NAME" : "school_scraper",
     "REPO" : "school-scraper",
     "DEPENDENCIES" : [
-        "requests",
         "pandas",
         "lxml",
-        "tabulate"
+        "tabulate",
     ],
     "DEV_DEPENDENCIES" : [
         "pytest",
@@ -25,6 +24,7 @@
         # pinning coverage package until bugs with coveralls plugin is fixed
         # https://github.com/z4r/python-coveralls/issues/73
         "coverage<5.0",
+        "requests",
     ],
     "DESCRIPTION" : "Web scraper that parses school closure and late bus announcements from various school websites",
     "KEYWORDS" : "web scraper school closure late bus",

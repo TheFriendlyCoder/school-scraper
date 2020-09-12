@@ -93,13 +93,13 @@ evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / stateme
 [SIMILARITIES]
 
 # Minimum lines number of a similarity.
-min-similarity-lines=7
+min-similarity-lines=10
 
 # Ignore comments when computing similarities.
-ignore-comments=yes
+ignore-comments=no
 
 # Ignore docstrings when computing similarities.
-ignore-docstrings=yes
+ignore-docstrings=no
 
 # Ignore imports when computing similarities.
 ignore-imports=no
