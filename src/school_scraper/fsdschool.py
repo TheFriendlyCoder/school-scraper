@@ -38,7 +38,17 @@ class FSDSchool:
         return self._df[FSDSchool.OPEN_FIELD] == "Ouvert"
 
     @property
+    def is_closed(self):
+        """bool: True if school is closed, False if not"""
+        return self._df[FSDSchool.OPEN_FIELD] == "Fermée"
+
+    @property
     def has_late_busses(self):
         """bool: True if 1 or more buses are late, False if all are running
         on time"""
         return self._df[FSDSchool.BUS_FIELD] != "À l’heure"
+
+    @property
+    def are_busses_running(self):
+        """bool: True if school buses are circulating, False if not"""
+        return self._df[FSDSchool.BUS_FIELD] != "Ne circulent pas"
