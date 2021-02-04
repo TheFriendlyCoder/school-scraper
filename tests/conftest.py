@@ -5,6 +5,10 @@ from school_scraper.fsdscraper import FSDScraper
 
 SAMPLE_RESPONSE = """"""
 TEST_DIR = Path(__file__).parent
+
+# Sample data description:
+# closed school: École Régionale de Baie-Sainte-Anne
+# opened school: École Clément-Cormier
 SAMPLE_DATA = TEST_DIR.joinpath("sample.html")
 
 

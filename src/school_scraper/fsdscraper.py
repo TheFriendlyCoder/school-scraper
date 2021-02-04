@@ -130,6 +130,15 @@ class FSDScraper:
                 retval.append(cur_school.name)
         return retval
 
+    def find_school(self, school_name):
+        """FSDSchool: locates a specific school based on it's name. Returns
+        None if no such school exists"""
+        for cur_district in self.districts:
+            for cur_school in cur_district.schools:
+                if cur_school.name == school_name:
+                    return cur_school
+        return None
+
 
 if __name__ == "__main__":  # pragma: no cover
     text = requests.get(FSDScraper.SCHEDULE_URL).text
