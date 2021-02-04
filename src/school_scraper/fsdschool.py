@@ -52,3 +52,12 @@ class FSDSchool:
     def are_busses_running(self):
         """bool: True if school buses are circulating, False if not"""
         return self._df[FSDSchool.BUS_FIELD] != "Ne circulent pas"
+
+    @property
+    def special_announcements(self):
+        """str: gets any special announcements that may be applicable
+        to this school"""
+        if self._df[FSDSchool.MESSAGE_FIELD] != "Voir avis général":
+            return ""
+
+        # TODO: look up Avis General section in table at top of page

@@ -9,6 +9,7 @@ TEST_DIR = Path(__file__).parent
 # Sample data description:
 # closed school: École Régionale de Baie-Sainte-Anne
 # opened school: École Clément-Cormier
+# opened school with general announcement: École des Pionniers
 SAMPLE_DATA = TEST_DIR.joinpath("sample.html")
 
 
